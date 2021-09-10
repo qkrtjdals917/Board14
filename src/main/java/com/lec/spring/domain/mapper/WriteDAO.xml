@@ -30,7 +30,7 @@
 	</insert>
 	
 	<!-- view.do -->
-	<select id="selectByUid" resultType="com.lec.spring.WriteDTO">
+	<select id="selectByUid" resultType="com.lec.spring.domain.WriteDTO">
 		SELECT 
 			wr_uid uid, wr_subject subject, wr_content content, wr_name name, 
 			wr_viewcnt viewcnt, wr_regdate regDate 
@@ -57,7 +57,7 @@
 	
 	<!--  글 삭제 -->
 	<delete id="deleteByUid" flushCache="true">
-		DELETE FROM test_write WHERE uid = #{uid}
+		DELETE FROM test_write WHERE wr_uid = #{uid}
 	</delete>
 	
 </mapper> 
